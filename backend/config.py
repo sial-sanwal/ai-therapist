@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-twilio_sid = os.getenv("TWILIO_ACCOUNT_SID")
-twilio_token = os.getenv("TWILIO_AUTH_TOKEN")
-from_number = os.getenv("TWILIO_FROM_NUMBER")
-emergency_number = os.getenv("EMERGENCY_CONTACT")
-groq_key = os.getenv("GROQ_API_KEY")
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_FROM_NUMBER = os.getenv("TWILIO_FROM_NUMBER")
+EMERGENCY_CONTACT = os.getenv("EMERGENCY_CONTACT")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
