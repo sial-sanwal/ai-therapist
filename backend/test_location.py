@@ -3,7 +3,7 @@ from config import GOOGLE_MAP_API_KEY
 
 gmaps=googlemaps.Client(key=GOOGLE_MAP_API_KEY)
 
-
+ 
 def find_nearby_therapists_by_location(location: str) -> str:
     """
     Finds and returns a list of licensed therapists near the specified location.
