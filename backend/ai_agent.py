@@ -1,6 +1,5 @@
 from langchain.agents import tool
 from tools import query_medgemma, call_emergency
-from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from config import GROQ_API_KEY
 
@@ -44,7 +43,7 @@ def find_nearby_therapists_by_location(location: str) -> str:
 from langchain_groq import ChatGroq
 tools = [ask_mental_health_specialist, emergency_call_tool, find_nearby_therapists_by_location]
 #llm = ChatOpenAI(model="gpt-4", temperature=0.2, api_key=OPENAI_API_KEY)
-llm = ChatGroq(model="",temperature=0.2,api_key=GROQ_API_KEY)
+llm = ChatGroq(model="openai/gpt-oss-120b",temperature=0.2,api_key=GROQ_API_KEY)
 graph = create_react_agent(llm, tools=tools)
 
 SYSTEM_PROMPT = """
