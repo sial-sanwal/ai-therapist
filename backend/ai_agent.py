@@ -41,14 +41,10 @@ def find_nearby_therapists_by_location(location: str) -> str:
         "- Dr. James Patel - +1 (555) 987-6543\n"
         "- MindCare Counseling Center - +1 (555) 222-3333"
     )
-
-
-# Step1: Create an AI Agent & Link to backend
-
-
-
+from langchain_groq import ChatGroq
 tools = [ask_mental_health_specialist, emergency_call_tool, find_nearby_therapists_by_location]
-llm = ChatOpenAI(model="gpt-4", temperature=0.2, api_key=OPENAI_API_KEY)
+#llm = ChatOpenAI(model="gpt-4", temperature=0.2, api_key=OPENAI_API_KEY)
+llm = ChatGroq(model="",temperature=0.2,api_key=GROQ_API_KEY)
 graph = create_react_agent(llm, tools=tools)
 
 SYSTEM_PROMPT = """
